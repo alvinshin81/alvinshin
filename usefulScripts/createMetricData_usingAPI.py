@@ -59,11 +59,17 @@ testDegree = 1
 while number >= 100:
     for data in range(100):
         # 데이터에서 필요한 변수 취합 (광고계정ID ~ 소재 ID)
-        walletId = ws.acell('A' + str(i)).value
-        campaignId = ws.acell('B' + str(i)).value
-        adGroupId = ws.acell('C' + str(i)).value
-        representativeId = ws.acell('D' + str(i)).value
-        spendingMethod_org = ws.acell('E' + str(i)).value
+        # walletId = ws.acell('A' + str(i)).value
+        # campaignId = ws.acell('B' + str(i)).value
+        # adGroupId = ws.acell('C' + str(i)).value
+        # representativeId = ws.acell('D' + str(i)).value
+        # spendingMethod_org = ws.acell('E' + str(i)).value
+        # ws.acell로 하면 gspread api 호출횟수 제한에 걸릴 수 있어서 ws.acell 호출 최소화
+        walletId = excel_source[0][j]
+        campaignId = excel_source[1][j]
+        adGroupId = excel_source[2][j]
+        representativeId = excel_source[3][j]
+        spendingMethod_org = excel_source[4][j]
 
         if spendingMethod_org == 'CPM':
             spendingMethod = 'CPC'
@@ -131,11 +137,17 @@ print("[[마지막 소재 개수: " + str(len(excel_source) - j) + "]]")
 
 for data in range(len(excel_source) - j):
     # 데이터에서 필요한 변수 취합 (광고계정ID ~ 소재 ID)
-    walletId = ws.acell('A' + str(i)).value
-    campaignId = ws.acell('B' + str(i)).value
-    adGroupId = ws.acell('C' + str(i)).value
-    representativeId = ws.acell('D' + str(i)).value
-    spendingMethod_org = ws.acell('E' + str(i)).value
+    # walletId = ws.acell('A' + str(i)).value
+    # campaignId = ws.acell('B' + str(i)).value
+    # adGroupId = ws.acell('C' + str(i)).value
+    # representativeId = ws.acell('D' + str(i)).value
+    # spendingMethod_org = ws.acell('E' + str(i)).value
+    # ws.acell로 하면 gspread api 호출횟수 제한에 걸릴 수 있어서 ws.acell 호출 최소화
+    walletId = excel_source[0][j]
+    campaignId = excel_source[1][j]
+    adGroupId = excel_source[2][j]
+    representativeId = excel_source[3][j]
+    spendingMethod_org = excel_source[4][j]
     if spendingMethod_org == 'CPM':
         spendingMethod = 'CPC'
         chargeAmount_CPM = 3
