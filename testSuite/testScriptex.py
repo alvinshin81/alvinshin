@@ -10,3 +10,9 @@ b = 1
 for data in range(5):
     c = a + b
     print(c)
+time.sleep(67)
+et = datetime.fromtimestamp(time.time())
+
+lapse = et - dt
+print(lapse)
+print('소요시간: ' + str(lapse)[2:4])
