@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/model/drivers" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/testSuite" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/usefulScripts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/dataSecret" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

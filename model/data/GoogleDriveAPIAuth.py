@@ -11,10 +11,10 @@ class GoogleAPIAuth():
         'https://www.googleapis.com/auth/drive',
     ]
     try:
-        json_file_name = '../model/data/GoogleDriveAPI_notupload.json'
+        json_file_name = 'dataSecret/GoogleDriveAPI_notupload.json'
         credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
     except:
-        json_file_name = './model/data/GoogleDriveAPI_notupload.json'
+        json_file_name = 'dataSecret/GoogleDriveAPI_notupload.json'
         credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
 
     def __init__(self):
