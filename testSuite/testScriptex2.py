@@ -1,9 +1,14 @@
-import random
-from contoller.util.Utility import sprintUtility as su
+from selenium import webdriver
 
-a = random.randint(1, 10)
-b = random.randint(3,8)
 
-result = su().method_test(a, b)
-print(result)
+driver = webdriver.Chrome('../model/drivers/chromedriver_98')
+
+
+
+driver.get('chrome://downloads')
+
+driver.switch_to.frame('body')
+downloadfile = driver.find_element_by_xpath('//*[@id="file-link"]').text
+
+print(downloadfile)
 
